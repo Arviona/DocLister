@@ -12,9 +12,7 @@ $_time = microtime(true);
 $out = null;
 $DLDir = MODX_BASE_PATH . 'assets/snippets/DocLister/';
 
-require_once($DLDir . "core/DocLister.abstract.php");
-require_once($DLDir . "core/extDocLister.abstract.php");
-require_once($DLDir . "core/filterDocLister.abstract.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 if (isset($controller)) {
     preg_match('/^(\w+)$/iu', $controller, $controller);

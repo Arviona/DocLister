@@ -157,3 +157,8 @@ git commit -m "Описание коммита для тикета #42"
 git pull upstream master
 git push -u origin 999-название-вашей-ветки
 ```
+
+### Как обновить автозагрузчик
+```php
+php phpab.phar -o assets/cache/dl_autoload.php -b assets/cache/ composer.json
+```

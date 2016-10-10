@@ -5,6 +5,7 @@
   "license": "GPL-2.0",
   "autoload": {
     "classmap": [
+      "assets/snippets/DLUsers/",
       "assets/snippets/DocLister/",
       "assets/lib/"
     ]

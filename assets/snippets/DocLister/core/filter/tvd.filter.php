@@ -1,9 +1,5 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
-
-require_once 'tv.filter.php';
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Filters DocLister results by value of a given MODx Template Variables (TVs) with default.

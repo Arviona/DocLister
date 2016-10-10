@@ -1,7 +1,5 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * all controller for show info from all table

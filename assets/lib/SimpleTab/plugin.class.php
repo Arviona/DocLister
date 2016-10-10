@@ -1,10 +1,7 @@
 <?php
 namespace SimpleTab;
 
-include_once(MODX_BASE_PATH . 'assets/snippets/DocLister/lib/DLTemplate.class.php');
-include_once(MODX_BASE_PATH . 'assets/lib/APIHelpers.class.php');
-require_once(MODX_BASE_PATH . 'assets/lib/Helpers/FS.php');
-require_once(MODX_BASE_PATH . 'assets/lib/Helpers/Assets.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class Plugin

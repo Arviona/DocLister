@@ -1,10 +1,6 @@
 <?php namespace DLUsers;
 
-include_once(MODX_BASE_PATH . 'assets/lib/APIHelpers.class.php');
-include_once(MODX_BASE_PATH . 'assets/lib/Helpers/FS.php');
-include_once(MODX_BASE_PATH . 'assets/lib/MODxAPI/modUsers.php');
-include_once(MODX_BASE_PATH . 'assets/snippets/DocLister/lib/DLTemplate.class.php');
-include_once(MODX_BASE_PATH . 'assets/snippets/DocLister/lib/DLCollection.class.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 use APIHelpers, DocumentParser, DLCollection, DLTemplate;
 use Helpers\FS;

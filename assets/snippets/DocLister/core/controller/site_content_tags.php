@@ -1,7 +1,4 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
 
 /**
  * site_content_tags controller with TagSaver plugin
@@ -12,7 +9,7 @@ if (!defined('MODX_BASE_PATH')) {
  * @author Agel_Nash <Agel_Nash@xaker.ru>
  */
 
-include_once(dirname(__FILE__) . "/site_content.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class site_content_tagsDocLister

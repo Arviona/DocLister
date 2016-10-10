@@ -3,7 +3,7 @@ if ( ! defined('MODX_BASE_PATH')) {
     die('HACK???');
 }
 
-require_once(MODX_BASE_PATH . "assets/snippets/DocLister/lib/DLTemplate.class.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 $tpl = '';
 if (isset($modx->Event->params['tpl'])) {

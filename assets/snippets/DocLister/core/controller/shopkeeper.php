@@ -1,7 +1,5 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * site_content controller
@@ -11,7 +9,6 @@ if (!defined('MODX_BASE_PATH')) {
  * @license GNU General Public License (GPL), http://www.gnu.org/copyleft/gpl.html
  * @author Agel_Nash <Agel_Nash@xaker.ru>, kabachello <kabachnik@hotmail.com>
  */
-include_once(dirname(__FILE__) . "/site_content.php");
 
 /**
  * Class shopkeeperDocLister

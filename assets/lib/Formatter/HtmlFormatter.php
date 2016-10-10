@@ -1,5 +1,7 @@
 <?php namespace Formatter;
 
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
+
 /**
  * Class HtmlFormatter
  * @package Formatter

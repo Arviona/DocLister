@@ -1,5 +1,7 @@
 <?php namespace Helpers;
 
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
+
 /**
  * Использование:
  * $v = new VideoThumb($link);

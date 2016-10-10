@@ -1,5 +1,5 @@
 <?php
-include_once(dirname(__FILE__) . "/autoTable.abstract.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class modTV

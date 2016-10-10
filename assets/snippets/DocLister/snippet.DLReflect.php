@@ -10,9 +10,7 @@
  *    &limitAfter=`3`
  * ]]
  */
-include_once(MODX_BASE_PATH . 'assets/snippets/DocLister/lib/DLCollection.class.php');
-include_once(MODX_BASE_PATH . 'assets/lib/APIHelpers.class.php');
-include_once(MODX_BASE_PATH . 'assets/snippets/DocLister/lib/DLReflect.class.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 $params = is_array($modx->event->params) ? $modx->event->params : array();
 

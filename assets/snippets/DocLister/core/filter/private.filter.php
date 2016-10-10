@@ -1,9 +1,5 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
-
-require_once 'content.filter.php';
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class private_DL_filter

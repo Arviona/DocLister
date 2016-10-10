@@ -1,6 +1,6 @@
 <?php
 
-require_once(MODX_BASE_PATH . 'assets/lib/Helpers/FS.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class AssetsHelper

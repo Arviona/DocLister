@@ -3,9 +3,7 @@
  * @license GNU General Public License (GPL), http://www.gnu.org/copyleft/gpl.html
  * @author kabachello <kabachnik@hotmail.com>
  */
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class filterDocLister

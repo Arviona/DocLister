@@ -1,5 +1,7 @@
 <?php namespace Formatter;
 
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
+
 /**
  * SQL Formatter is a collection of utilities for debugging SQL queries.
  * It includes methods for formatting, syntax highlighting, removing comments, etc.

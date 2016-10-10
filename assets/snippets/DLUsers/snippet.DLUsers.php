@@ -1,5 +1,8 @@
 <?php
-include_once(MODX_BASE_PATH . 'assets/snippets/DLUsers/src/Actions.php');
+if (!defined('MODX_BASE_PATH')) {
+    die('What are you doing? Get out of here!');
+}
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 $params = is_array($modx->event->params) ? $modx->event->params : array();
 $action = APIHelpers::getkey($params, 'action', '');

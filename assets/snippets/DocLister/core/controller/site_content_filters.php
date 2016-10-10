@@ -1,7 +1,5 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * site_content_filters controller for DocLister
@@ -24,8 +22,6 @@ if (!defined('MODX_BASE_PATH')) {
  * AND(content:template:eq:5; tv:tags:like:my tag) - fetch all documents with template id 5 and the words "my tag" in the TV named "tags"
  *
  */
-
-include_once(dirname(__FILE__) . "/site_content.php");
 
 /**
  * Class site_content_filtersDocLister

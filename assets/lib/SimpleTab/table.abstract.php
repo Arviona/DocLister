@@ -1,8 +1,6 @@
 <?php namespace SimpleTab;
 
-require_once(MODX_BASE_PATH . 'assets/lib/MODxAPI/autoTable.abstract.php');
-require_once(MODX_BASE_PATH . 'assets/lib/Helpers/FS.php');
-require_once(MODX_BASE_PATH . 'assets/lib/Helpers/PHPThumb.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class dataTable

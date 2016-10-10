@@ -1,20 +1,11 @@
 <?php
-if (!defined('MODX_BASE_PATH')) {
-    die('HACK???');
-}
 /**
  * DocLister class
  *
  * @license GNU General Public License (GPL), http://www.gnu.org/copyleft/gpl.html
  * @author Agel_Nash <Agel_Nash@xaker.ru>
  */
-include_once(MODX_BASE_PATH . 'assets/lib/APIHelpers.class.php');
-include_once(MODX_BASE_PATH . 'assets/lib/Helpers/FS.php');
-require_once(dirname(dirname(__FILE__)) . "/lib/jsonHelper.class.php");
-require_once(dirname(dirname(__FILE__)) . "/lib/sqlHelper.class.php");
-require_once(dirname(dirname(__FILE__)) . "/lib/DLTemplate.class.php");
-require_once(dirname(dirname(__FILE__)) . "/lib/DLCollection.class.php");
-require_once(dirname(dirname(__FILE__)) . "/lib/xnop.class.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class DocLister
@@ -350,13 +341,7 @@ abstract class DocLister
                     error_reporting(E_ALL ^ E_NOTICE);
                     ini_set('display_errors', 1);
                 }
-                $dir = dirname(dirname(__FILE__));
-                if (file_exists($dir . "/lib/DLdebug.class.php")) {
-                    include_once($dir . "/lib/DLdebug.class.php");
-                    if (class_exists("DLdebug", false)) {
-                        $this->debug = new DLdebug($this);
-                    }
-                }
+                $this->debug = new DLdebug($this);
             }
 
             if (is_null($this->debug)) {
@@ -1270,15 +1255,8 @@ abstract class DocLister
             $flag = true;
 
         } else {
-            if (!class_exists($classname, false) && $classname != '') {
-                if (file_exists(dirname(__FILE__) . "/extender/" . $name . ".extender.inc")) {
-                    include_once(dirname(__FILE__) . "/extender/" . $name . ".extender.inc");
-                }
-            }
-            if (class_exists($classname, false) && $classname != '') {
-                $this->extender[$name] = new $classname($this, $name);
-                $flag = true;
-            }
+            $this->extender[$name] = new $classname($this, $name);
+            $flag = true;
         }
         if (!$flag) {
             $this->debug->debug("Error load Extender " . $this->debug->dumpData($name));
@@ -1711,8 +1689,7 @@ abstract class DocLister
         $fltr_params = explode(':', $filter, 2);
         $fltr = APIHelpers::getkey($fltr_params, 0, null);
         // check if the filter is implemented
-        if (!is_null($fltr) && file_exists(dirname(__FILE__) . '/filter/' . $fltr . '.filter.php')) {
-            require_once dirname(__FILE__) . '/filter/' . $fltr . '.filter.php';
+        if (!is_null($fltr)) {
             /**
              * @var tv_DL_filter|content_DL_filter $fltr_class
              */

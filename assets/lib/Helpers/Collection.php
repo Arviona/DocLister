@@ -2,6 +2,8 @@
 
 use Closure;
 
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
+
 /**
  * @see: https://github.com/laravel/framework/blob/4.2/src/Illuminate/Support/Collection.php
  */

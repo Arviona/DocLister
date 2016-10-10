@@ -1,6 +1,6 @@
 <?php
 
-include_once(MODX_BASE_PATH . 'assets/lib/APIHelpers.class.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class DLTemplate
@@ -316,10 +316,6 @@ class DLTemplate
      */
     public function createPHx($debug = 0, $maxpass = 50)
     {
-        if (!class_exists('DLphx', false)) {
-            include_once(dirname(__FILE__) . '/DLphx.class.php');
-        }
-
         return new DLphx($debug, $maxpass);
     }
 

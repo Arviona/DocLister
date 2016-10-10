@@ -3,7 +3,7 @@ if ( ! defined('MODX_BASE_PATH')) {
     die('HACK???');
 }
 
-require_once(MODX_BASE_PATH . "assets/snippets/DocLister/lib/sqlHelper.class.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 switch (true) {
     case ( ! empty($fromget)):

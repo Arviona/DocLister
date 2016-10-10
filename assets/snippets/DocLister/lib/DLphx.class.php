@@ -10,7 +10,7 @@
 #	Date: March 22, 2013
 #
 ####*/
-include_once(MODX_BASE_PATH . 'assets/lib/APIHelpers.class.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class DLphx

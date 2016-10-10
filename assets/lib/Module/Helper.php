@@ -1,6 +1,6 @@
 <?php namespace Module;
 
-include_once(dirname(dirname(__FILE__)) . '/APIHelpers.class.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class Helper
@@ -113,7 +113,6 @@ class Helper extends \APIhelpers
      */
     public function isErrorJSON($json)
     {
-        require_once(MODX_BASE_PATH . "assets/snippets/DocLister/lib/jsonHelper.class.php");
         $error = \jsonHelper::json_last_error_msg();
         if (!in_array($error, array('error_none', 'other'))) {
             $error = true;

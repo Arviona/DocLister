@@ -2,7 +2,7 @@
 if (!defined("JSON_ERROR_UTF8")) {
     define("JSON_ERROR_UTF8", 5);
 } //PHP < 5.3.3
-include_once("xnop.class.php");
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class jsonHelper

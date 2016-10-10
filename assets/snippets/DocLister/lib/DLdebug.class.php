@@ -1,6 +1,5 @@
 <?php
-include_once(MODX_BASE_PATH . 'assets/lib/Formatter/SqlFormatter.php');
-include_once(MODX_BASE_PATH . 'assets/lib/Formatter/HtmlFormatter.php');
+require_once(MODX_BASE_PATH . 'assets/cache/dl_autoload.php');
 
 /**
  * Class DLdebug
